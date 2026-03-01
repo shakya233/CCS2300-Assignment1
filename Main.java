@@ -3,7 +3,7 @@ package datasorter;
 import java.util.Scanner;
 import java.util.Random;
 
-public class Main {
+public class Mainjava {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         SortingAlgorithms sorter = new SortingAlgorithms();
@@ -35,7 +35,7 @@ public class Main {
                     break;
                     
                 case 2:
-                    System.out.print("How many random numbers? ");
+                         System.out.print("How many random numbers? ");
                     int size = scanner.nextInt();
                     numbers = new int[size];
                     Random rand = new Random();
@@ -67,7 +67,7 @@ public class Main {
                         System.out.println("Please enter/generate numbers first!");
                     } else {
                         int[] arr = numbers.clone();
-                        long start = System.nanoTime();
+                          long start = System.nanoTime();
                         sorter.mergeSort(arr, 0, arr.length-1);
                         long end = System.nanoTime();
                         System.out.println("✅ Merge Sort completed!");
@@ -99,7 +99,7 @@ public class Main {
                         sorter.displayComparisonTable(numbers);
                     }
                     break;
-                    
+                           
                 case 7:
                     System.out.println("👋 Goodbye! Thanks for using Data Sorter!");
                     System.exit(0);
@@ -118,3 +118,4 @@ public class Main {
         System.out.println();
     }
 }
+
