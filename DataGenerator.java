@@ -34,9 +34,9 @@ public class DataGenerator {
 
         } else {
             System.out.println("Invalid choice!");
-            return null;
+                  return null;
         }
-
         return arr;
     }
 }
+
