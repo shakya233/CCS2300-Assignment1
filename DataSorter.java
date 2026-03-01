@@ -37,7 +37,7 @@ public class DataSorter {
             // Merge Sort timing
             start = System.nanoTime();
             SortingAlgorithms.mergeSort(mergeArr, 0, mergeArr.length - 1);
-            long mergeTime = System.nanoTime() - start;
+              long mergeTime = System.nanoTime() - start;
 
             // Quick Sort timing
             start = System.nanoTime();
@@ -61,3 +61,4 @@ public class DataSorter {
         System.out.println();
     }
 }
+
