@@ -1,11 +1,9 @@
 package datasorter;
 
-import java.util.*;
-
 public class SortingAlgorithms {
     
     // ========== BUBBLE SORT ==========
-    public void bubbleSort(int[] arr) {
+    public static void bubbleSort(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n-1; i++) {
             for (int j = 0; j < n-i-1; j++) {
@@ -19,7 +17,7 @@ public class SortingAlgorithms {
     }
     
     // ========== MERGE SORT ==========
-    public void mergeSort(int[] arr, int left, int right) {
+    public static void mergeSort(int[] arr, int left, int right) {
         if (left < right) {
             int mid = left + (right - left) / 2;
             mergeSort(arr, left, mid);
@@ -28,7 +26,7 @@ public class SortingAlgorithms {
         }
     }
     
-    public void merge(int[] arr, int left, int mid, int right) {
+    public static void merge(int[] arr, int left, int mid, int right) {
         int n1 = mid - left + 1;
         int n2 = right - mid;
         
@@ -66,15 +64,21 @@ public class SortingAlgorithms {
     }
     
     // ========== QUICK SORT ==========
-    public void quickSort(int[] arr, int low, int high) {
+    public static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
-            int pi = partition(arr, low, high);
+            int pi = 0;
+			try {
+				pi = partition(arr, low, high);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             quickSort(arr, low, pi - 1);
             quickSort(arr, pi + 1, high);
         }
     }
     
-    public int partition(int[] arr, int low, int high) {
+    public static int partition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = low - 1;
         
@@ -264,3 +268,4 @@ public class SortingAlgorithms {
         return "Quick Sort";
     }
 }
+
